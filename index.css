@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f1f5f9; 
+    color: #2c3e50; 
+    padding: 1rem;
+    direction: rtl;
+}
+
+header {
+    background-color: #2a9d8f; 
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.alls {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "description"
+        "planets"
+        "footer";
+    gap: 1.5rem;
+}
+
+.description {
+    grid-area: description;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description h3 {
+    color: #2a9d8f;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.description img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planets {
+    grid-area: planets;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planets h3 {
+    color: #264653;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.planets ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+}
+
+.planets a {
+    color: #e76f51;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.planets a:hover {
+    color: #f4a261; 
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #264653; 
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #e9c46a; 
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .alls {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "description planets"
+            "footer footer";
+    }
+
+    .description,
+    .planets {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .alls {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "header header"
+            "description planets"
+            "footer footer";
+    }
+
+    header {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+
+    .description,
+    .planets {
+        padding: 2.5rem;
+    }
+}
